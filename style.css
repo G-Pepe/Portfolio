@@ -1,0 +1,472 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  color: #363636;
+  background-color: #e7e8ea;
+  font-family: "Raleway", sans-serif;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  border: 2px solid rgb(6, 207, 93);
+}
+
+/*  styling of navbar */
+
+.navbar {
+  position: fixed;
+  right: 0;
+  background-color: #efeff0;
+  width: 100%;
+  height: 6rem;
+  box-shadow: 12px 12px 40px -20px rgba(174, 139, 139, 0.74);
+  -webkit-box-shadow: 12px 12px 40px -20px rgba(174, 139, 139, 0.74);
+  -moz-box-shadow: 12px 12px 40px -20px rgba(174, 139, 139, 0.74);
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+li {
+  padding: 0.8rem 3.5rem;
+  list-style: none;
+  font-size: 2rem;
+}
+
+h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 9.7rem;
+  margin-bottom: 3rem;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #363636;
+  padding: 0.7rem;
+}
+
+.navbar a:visited {
+  color: #363636;
+}
+
+.navbar:hover a {
+  background-color: #53b29b;
+  color: #fff;
+  border-radius: 3px;
+}
+
+li:nth-child(1) {
+  position: fixed;
+  left: 3%;
+  color: #53b29b;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+li:nth-child(1):visited {
+  color: #53b29b;
+}
+
+/* styling of the landing page. 3 elements placed with flexbox */
+
+.container {
+  margin-top: 6rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.sliding {
+  width: 100%;
+  height: 35vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2f2f2f;
+  color: #e7e8ea;
+  line-height: 9rem;
+  font-family: "Playfair Display", serif;
+}
+
+.pic {
+  display: flex;
+  width: 50%;
+  height: 40vh;
+  justify-content: center;
+  align-items: center;
+  vertical-align: baseline;
+}
+
+.me {
+  clip-path: polygon(26% 0, 100% 0%, 92% 100%, 17% 100%);
+  width: 50%;
+  /* margin-bottom: 22rem; */
+}
+
+.text {
+  width: 50%;
+  height: 40vh;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.text p {
+  font-size: 2rem;
+  text-align: justify;
+  padding-right: 1rem;
+}
+
+.text h2 {
+  margin-top: 1rem;
+}
+
+.line {
+  font-size: 2rem;
+  overflow: hidden;
+  white-space: nowrap;
+  /* font-family: monospace; */
+  border-right: 1px solid red;
+  margin: 0 auto;
+  letter-spacing: 0.1rem;
+}
+
+.type {
+  animation: typewriter 6s steps(60, end), cursor 500ms infinite normal;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0rem;
+  }
+  to {
+    width: 35rem;
+  }
+}
+
+@keyframes cursor {
+  from {
+    border-right-color: #fff;
+  }
+
+  to {
+    border-right-color: transparent;
+  }
+}
+
+/* PROJECTS section made with Flexbox*/
+
+.works {
+  display: flex;
+  flex-flow: row wrap;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-around;
+}
+
+.work {
+  width: 30%;
+  height: 30vh;
+  margin-top: 2.5rem;
+  box-shadow: 13px 4px 12px -1px rgba(202, 202, 202, 0.79);
+  -webkit-box-shadow: 13px 4px 12px -1px rgba(202, 202, 202, 0.79);
+  -moz-box-shadow: 13px 4px 12px -1px rgba(202, 202, 202, 0.79);
+  position: relative;
+}
+
+.one {
+  background-image: url(/natureoflife.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.two {
+  background-image: url(/HOY.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.three {
+  background-image: url(/fanta.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.four {
+  background-image: url(/boulder.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.five {
+  background-image: url(/japa.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.six {
+  background-image: url(/rondi.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.caption {
+  position: absolute;
+  bottom: 40%;
+  left: 30%;
+  width: 100%;
+  visibility: hidden;
+}
+
+.text-center {
+  background-color: #e7e8ea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16rem;
+  color: #53b29b;
+  font-size: 1.8rem;
+}
+
+.work:hover a {
+  visibility: visible;
+}
+
+.work:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.view_project {
+  font-size: 2rem;
+  width: 16rem;
+  height: 4rem;
+  background-color: #53b29b;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fas {
+  padding-left: 1.3rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* .view_project:hover {
+  filter: brightness(300%);
+  font-size: 2rem;
+  width: 18rem;
+  height: 6rem;
+  font-weight: bold;
+    
+} 
+
+
+
+/* SKILLS */
+
+/* Created layout with flexbox. I created a flex container with 'display: flex' and 'flex-wrap: wrap'. Then I inserted a collapsed row (as it was a <br>) between some items when I wanted the item before the 'break' to occupy all the width. The break is made with 'flex-basis: 100%', meaning that .break should take up 100% of the width of the container, sitting on its own row to accomplish that */
+
+.boxes {
+  width: 90%;
+  height: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.box {
+  flex-grow: 1;
+  font-size: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #363636;
+  flex-direction: column;
+  background-color: #e7e8ea;
+  box-shadow: 13px 4px 12px 7px rgba(202, 202, 202, 0.79) inset;
+  -webkit-box-shadow: 13px 4px 12px 7px rgba(202, 202, 202, 0.79) inset;
+  -moz-box-shadow: 13px 4px 12px 7px rgba(202, 202, 202, 0.79) inset;
+
+  /* box-shadow: 13px 4px 12px -1px rgba(202,202,202,0.79);
+-webkit-box-shadow: 13px 4px 12px -1px rgba(202,202,202,0.79);
+-moz-box-shadow: 13px 4px 12px -1px rgba(202,202,202,0.79); */
+}
+
+.box:hover {
+  font-size: 8rem;
+}
+
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+.box h3 {
+  font-size: 1.5rem;
+}
+
+/* FORM */
+
+#contacts {
+  height: 90vh;
+}
+
+.myform {
+  width: 30%;
+  height: 60vh;
+  text-align: center;
+  margin: 0 auto;
+  background-color: #e7e8ea;
+  font-size: 2rem;
+}
+fieldset {
+  height: 100%;
+}
+
+label {
+  display: block;
+  /* background-color: #363636;
+  color: white; */
+  width: 60%;
+  margin: 0 auto;
+  height: 2rem;
+}
+
+input,
+textarea {
+  width: 60%;
+  height: 4rem;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+legend {
+  text-align: left;
+  margin-bottom: 2rem;
+  color: #53b29b;
+  font-weight: 900;
+}
+
+placeholder {
+  font-family: "Raleway", sans-serif;
+}
+
+button {
+  width: 30%;
+  height: 10%;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+footer {
+  width: 100%;
+  height: 8vh;
+  font-size: 3rem;
+  text-align: center;
+  padding: 1.7rem;
+  /* background-color: rgba(92, 87, 87, 0.8); */
+}
+
+footer a:visited {
+  color: #008af6;
+}
+
+/* MEDIA QUERIES  */
+
+@media only screen and (max-width: 992px) {
+  .sliding {
+    max-width: 992px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pic {
+    max-width: 992px;
+    margin: 0 auto;
+  }
+
+  .text {
+    max-width: 992px;
+  }
+
+  .works {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 992px;
+    margin: 0 auto;
+    justify-content: space-around;
+  }
+
+  .work {
+    max-width: 992px;
+    position: static;
+  }
+
+  .boxes {
+    max-width: 992px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-evenly;
+  }
+
+  .box {
+    width: 100%;
+    margin: auto 0;
+    font-size: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #363636;
+  }
+
+  .myform {
+    text-align: center;
+    margin: 0 auto;
+    background-color: #e7e8ea;
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* section {
+    height: 100vh;
+    width: 100%;
+  } */
+
+  /* .container {
+    display: inline-block;
+  } */
+
+  .text {
+    max-width: 768px;
+  }
+
+  /* .works {
+    display: inline-block;
+    justify-content: space-around;
+  } */
+
+  .work {
+    max-width: 768px;
+    /* height: 15vh; */
+    margin: 0 auto;
+    position: static;
+  }
+}
