@@ -12,19 +12,21 @@ html {
 }
 
 section {
-  width: 100%;
-  height: 100vh;
-  border: 2px solid rgb(6, 207, 93);
+  /* width: 100%; */
+  min-height: 100vh;
+  /* border: 2px solid rgb(6, 207, 93); */
+  padding: 3rem;
 }
 
 /*  styling of navbar */
 
 .navbar {
   position: fixed;
-  right: 0;
+  top: 0;
   background-color: #efeff0;
   width: 100%;
   height: 6rem;
+  z-index: 999;
   box-shadow: 12px 12px 40px -20px rgba(174, 139, 139, 0.74);
   -webkit-box-shadow: 12px 12px 40px -20px rgba(174, 139, 139, 0.74);
   -moz-box-shadow: 12px 12px 40px -20px rgba(174, 139, 139, 0.74);
@@ -67,11 +69,12 @@ h2 {
 }
 
 li:nth-child(1) {
-  position: fixed;
-  left: 3%;
+  /* position: fixed; */
+  margin-left: 2%;
   color: #53b29b;
   font-size: 3rem;
   font-weight: bold;
+  background-color: red;
 }
 
 li:nth-child(1):visited {
@@ -82,9 +85,9 @@ li:nth-child(1):visited {
 
 .container {
   margin-top: 6rem;
-  display: flex;
+  /* display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: space-around; */
 }
 
 .sliding {
@@ -98,35 +101,45 @@ li:nth-child(1):visited {
   line-height: 9rem;
   font-family: "Playfair Display", serif;
 }
-
-.pic {
+.about {
   display: flex;
+  /* flex-direction: column; */
+  justify-content: space-evenly;
+}
+.pic {
+  /* display: flex; 
   width: 50%;
   height: 40vh;
-  justify-content: center;
-  align-items: center;
+   justify-content: center;
+  align-items: center; 
   vertical-align: baseline;
+  max-width: 32rem; */
 }
 
 .me {
   clip-path: polygon(26% 0, 100% 0%, 92% 100%, 17% 100%);
-  width: 50%;
+  /* width: 40%; */
   /* margin-bottom: 22rem; */
+  max-height: 30rem;
+  margin-top: -3rem;
 }
 
 .text {
-  width: 50%;
-  height: 40vh;
-  display: inline-block;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
+  /* width: 55%; */
+  font-size: 0.7rem;
+  /* height: 40vh; */
+  /* display: inline-block; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* padding: 2rem; */
 }
 
 .text p {
-  font-size: 2rem;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  width: 50rem;
   text-align: justify;
-  padding-right: 1rem;
+  /* margin-right: 5rem; */
 }
 
 .text h2 {
@@ -391,36 +404,36 @@ footer a:visited {
 
 @media only screen and (max-width: 992px) {
   .sliding {
-    max-width: 992px;
+    /* max-width: 992px; */
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
   .pic {
-    max-width: 992px;
+    /* max-width: 992px; */
     margin: 0 auto;
   }
 
   .text {
-    max-width: 992px;
+    /* max-width: 992px; */
   }
 
   .works {
     display: flex;
     flex-flow: row wrap;
-    max-width: 992px;
+    /* max-width: 992px; */
     margin: 0 auto;
     justify-content: space-around;
   }
 
   .work {
-    max-width: 992px;
+    /* max-width: 992px; */
     position: static;
   }
 
   .boxes {
-    max-width: 992px;
+    /* max-width: 992px; */
     display: flex;
     margin: 0 auto;
     justify-content: space-evenly;
